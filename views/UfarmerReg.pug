@@ -1,0 +1,100 @@
+doctype html
+head
+  title Urban farmer Registration
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  // Bootstrap CSS v5.2.1
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT' crossorigin='anonymous')
+  link(rel='stylesheet' href='css/Form.css')
+  link(rel='icon' href='Img/favicon.png')
+header
+  // place navbar here
+main
+  .container(style='transform:translateY(5px);')
+    h2 Please Sign Up
+    hr.hr
+    .row.justify-content-center.align-items-center.my-5.cage
+      .col-lg-2.cage
+        form(action='/ufReg' name='registration' method='POST' onsubmit='return validation2();')
+          .row.justify-content-center.align-items-center.g-2.lamar
+            .col-lg-4.form-zones
+              label First name:
+              input.form-inputs(name='userName' type='text')
+              small#userNameerr
+            .col-lg-4.form-zones
+              label Last name:
+              input.form-inputs(name='lastName' type='text')
+              small#lastNameerr
+            .col-lg-4.form-zones
+              label Unique Id:
+              input.form-inputs(name='uniqueNumber' type='text')
+              small#uniqueNumbererr
+            .col-lg-4.form-zones
+              label Date of Registration:
+              input.form-inputs(name='regDate' type='date')
+              small#regDateerr
+            .col-lg-4.form-zones
+              label NIN:
+              input.form-inputs(name='ninNumber' type='text')
+              small#ninNumbererr
+            .col-lg-4.form-zones
+              label Date of Birth:
+              input.form-inputs(name='birthDay' type='date' max="2012-01-01")
+              small#birthDayerr
+            .col-lg-4.form-zones
+              label Role:
+              select#select.form-select(name='role')
+                option(value='') Select option
+                option(value='Urban Farmer') Urban farmer
+              small#roleerr
+            .col-lg-4.form-zones
+              label Activities:
+              select#select.form-select(name='activities')
+                option(value='') Select option
+                option(value='Horticulture') &#x1F34F; Horticulture
+                option(value='Poultry') &#x1F414; Poultry
+                option(value='Dairy') &#x1F404; Dairy
+              small#activitieserr
+            .col-lg-4.form-zones
+              label Contact:
+              input.form-inputs(name='phoneNumber' type='text')
+              small#phoneNumbererr
+            .col-lg-3
+              label(for='ward') Ward
+              select#select.form-select(name='wardName')
+                option(value='') Select option
+                option(value='Ward1') Ward1
+                option(value='Ward2') Ward2
+                option(value='Ward3') Ward3
+                option(value='Ward4') Ward4
+              small#wardNameerr
+            .col-sm-12.col-lg-3.form-zones(style=' transform:translateX(10px);')
+              label Direction:
+              input.form-inputs(name='direction' type='text')
+              small#directionerr
+            .col-lg-3.form-zones
+              label Create Password:
+              input.form-inputs(name='password' type='password')
+              small#passworderr
+            .col-lg-3.form-zones
+              label Comfirm Password:
+              input.form-inputs(name='comfirmPassword' type='password')
+              small#comfirmPassworderr
+            .col-lg-12.form-radio
+              label Gender:
+              .radio
+                | Male
+                input(type='radio' name='sex' value='male' checked='')
+                small#sexerr
+                |             Female
+                input(type='radio' name='sex' value='female')
+                small#sexerr
+            hr.boundary
+            .submit
+              .btnz(style='transform:translateY(18px);')
+                button(type='submit')
+                  span
+                  | Sign Up
+footer
+script(src="/js/UFvalidation.js") 

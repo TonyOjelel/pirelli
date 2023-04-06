@@ -1,0 +1,123 @@
+doctype html
+head
+    title Ufarm team dashboards
+    // Required meta tags
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    // Bootstrap CSS v5.2.1
+    link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT' crossorigin='anonymous')
+    link(rel='stylesheet' href='css/dashboard copy.css')
+    link(rel='icon' href='Img/favicon.png')
+body
+    style.
+
+        body{
+          background:powderblue; 
+        }
+        .form-style{
+        position:absolute;
+        top:15%;  
+        text-align:center;
+        color:rgba(240, 220, 253);
+        }
+        .form-field{
+            display:flex;
+            justify-content:space-around;
+        }
+        form-zones{
+        padding: 12px;
+        transform: translateX(-6px);
+        }
+
+        .form-field input, select{
+            text-align:center;
+             background:rgba(200, 198, 253);
+            /* box-shadow:0 0 6px 2px rgb(5, 135, 161,0.56); */
+            font-weight: 800;
+            margin:2px 12px;
+            width: 100%;
+            height: 8vh;
+            border: 2px solid rgb(17, 17, 40);
+            border-radius: 5px;
+            padding: 0;
+        }
+         select:hover{
+            box-shadow:0 0 6px 5px rgb(0,0,0,0.87); */
+            transform: scale(1.4);
+            z-index: 9;
+            transition: ease-in-out 0.6s
+        }
+        input:hover{
+            box-shadow:0 0 6px 5px rgb(0,0,0,0.87); */
+            transform: scale(1.5);
+            z-index: 9;
+            transition: ease-in-out 0.6s 
+        }
+        .form-btn{
+            transform:translateY(55px);
+            margin-left:12px;
+            padding:25px;
+        }
+        .btnz{
+            background: linear-gradient(to bottom,rgba(80, 18, 123, 0.87),rgba(197, 108, 253),rgba(106, 40, 118, 0.86));
+            padding:16px;
+            font-size:25px;
+            font-weight:900;
+            color: rgb(11, 11, 11,0.87);
+        }
+        .btnz:hover{
+            transform: scale(1.6);
+            z-index: 9;
+            transition: ease-in-out 0.6s
+        }
+        .btnz:hover{
+           box-shadow:0 0 6px 5px rgb(0,0,0,0.87); 
+        }
+        h3{
+            color: rgb(8, 45, 45);
+            font-size:54px;
+            font-weight:900;
+        }
+        label{
+          color: rgb(8, 45, 45);
+          font-weight:900;  
+        } 
+        hr{
+            margin-bottom:45px;
+            padding:12px;
+             background: linear-gradient(to bottom,rgba(0, 0, 123),rgba(197, 108, 253),rgba(126, 240, 118));
+        }
+    .container-fluid.form-style
+        form#signup.form(action='/produce/update?id='+products._id name='registration' method='POST')
+            h3 Update Produce 
+            hr
+            .row
+                .col-lg-4
+                    .form-field
+                        label Price:
+                        input#price(type='number' name='price' autocomplete='off' value=products.price)
+                .col-lg-4
+                    .form-field
+                        label Quantity:
+                        input#ward(type='number' name='prodQuantity' autocomplete='off' value=products.prodQuantity)
+                .col-lg-4
+                    .form-field
+                        label Mode of Delivery:
+                        select(name='deliveryMode')
+                            option(value="pick up") Pick Up
+                            option(value="home delivery") Home Delivery
+                .col-lg-4.my-5
+                    .form-field
+                        label Mode of Payment:
+                        select(name='paymentMode')
+                            option(value="Cash" selected = products.prodName === 'Cash') Cash
+                            option(value="Mobile Money" selected = products.prodName === 'Mobile Money') Mobile Money 
+                .col-lg-4.my-5
+                    .form-field
+                        label Category:
+                        select(name='prodCategory')
+                            option(value="Horticulture") Horticulture
+                            option(value="Poultry") Poultry 
+                            option(value="Dairy") Dairy 
+                .form-btn
+                    button.btn.btnz(class='button' type='submit') Update

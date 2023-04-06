@@ -1,0 +1,110 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='bootstrap-css/css/bootstrap.css')
+    link(rel='stylesheet' href='css/style.css')
+    title Registration
+    style.
+
+        body{
+            background:powderblue;
+            font-family:Helvetica;  
+        }
+        .form-style{ 
+        text-align:center;
+        color:rgba(240, 220, 253);
+        }
+        .form-zones{
+        padding: 12px;
+        transform: translateX(-6px);
+        }
+        .form-field input, select{
+            text-align:center;
+            background:rgba(200, 198, 253);
+            
+            font-weight: 800;
+            margin:2px 12px;
+            width: 50%;
+            height: 8vh;
+            border: 2px solid rgb(17, 17, 40);
+            border-radius: 5px;
+            padding: 0;
+        }
+            select:hover{
+            font-size:35px;
+            font-weight:900;
+            box-shadow:0 0 6px 5px rgb(0,0,0,0.87);
+            transform: scale(1.2);
+            z-index: 2;
+            transition: ease-in-out 0.6s
+        }
+        input:hover{
+            box-shadow:0 0 6px 5px rgb(0,0,0,0.87);
+            transform: scale(1.5);
+            z-index: 9;
+            transition: ease-in-out 0.6s 
+        }
+        .form-btn{
+            transform:translateY(55px);
+            margin-left:12px;
+            padding:45px;
+        }
+
+        .btnz{
+            padding:25px;
+        }
+        .btnz,.submit{
+            background: linear-gradient(to bottom,rgba(80, 18, 123, 0.87),rgba(197, 108, 253),rgba(106, 40, 118, 0.86));
+            padding-top:18px;
+            padding-bottom:18px;
+            font-size:18px;
+            font-weight:900;
+            border-radius: 5px;
+            color: rgb(11, 11, 11,0.87);
+            text-decoration:none;
+        }
+        .submit{
+            background:grey;
+            transform: translateY(46px); 
+        }
+        .submit:hover{
+            transform: scale(-4.4);
+            z-index: 9;
+            transition: ease-in-out 0.8s
+        }
+        .btnz,submit:hover{
+            box-shadow:0 0 6px 5px rgb(0,0,0,0.87); 
+        }
+        h3{
+            color: rgb(8, 45, 45);
+            font-size:65px;
+            font-weight:900;
+        }
+        label{
+            color: rgb(8, 45, 45);
+            font-weight:900;
+            font-size:24px;
+        } 
+        hr{
+            margin-bottom:45px;
+            padding:12px;
+             background: linear-gradient(to bottom,rgba(120, 80, 213),rgba(147, 240, 218),rgba(156, 240, 218));
+        }
+    .container.form-style
+        form#signup.form(action='/produce/available/?id='+items._id name='registration' method='POST')
+            h3 Produce availability
+            hr
+            .row
+                .col
+                    .form-field
+                        label(for='availability') Product available:
+                        select(name='availability')
+                            option(value="Available" selected = items.availability === "Available") Available
+                            option(value="Booked" selected = items.availability === 'Booked') Booked
+                            option(value="N/A" selected = items.availability === 'N/A') N/A
+                .form-field
+                    button.submit(type='submit') Submit   
+    .form-btn
+        a.btn.btnz(class='button' href='/foDashboard') Back

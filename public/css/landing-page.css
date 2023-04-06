@@ -1,0 +1,98 @@
+body{
+    background-color: rgb(232, 246, 255);
+    list-style: none;
+}
+.logo-1{
+    font-family:'Alfa Slab One', cursive; 
+    color: rgb(33, 175, 113);
+    font-size: xx-large;
+    text-align: center;
+}
+.logo-2{
+    text-align: center;
+}
+
+.d-block{
+    height: 100vh;
+}
+
+fieldset{
+margin-bottom: 30px;
+}
+
+.paragraph{
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(12, 18, 22,0.78);
+}
+
+
+.entry{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+  
+}
+.get-started{
+    color: rgb(5, 10, 10);
+    font-weight: 900;
+    font-size: 20px;
+    width: 50%;
+    height: 8vh;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    background-color: rgb(98, 224, 119);
+    font-weight: 600;
+    box-shadow: 0px 0px 4px 2px rgb(0, 128, 68);
+}
+
+
+.farm-label{
+height: 12vmax;
+width: 150px;
+}
+
+.farm-icon{
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.advert{
+    font-size: 18px;
+}
+
+.d-none h3 {
+    font-family:'Alfa Slab One', cursive;
+    font-size: 75px;
+   font-weight: bold;
+color:rgb(16, 239, 97);
+}
+
+.charts{
+    background: rgb(0, 0, 0,0.67);
+    transform: translateY(-175px);
+}
+.charts p{
+    color: rgb(223, 237, 249,0.78);
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.one{
+    background: rgb(0, 0, 0,0.67);
+    transform: translateY(-165px);  
+}
+.one p{
+    font-family: 'Fira Sans', sans-serif;
+    color: rgb(223, 237, 249,0.78);
+}
+
+
+
+#login{
+    background:linear-gradient(rgba(134, 125, 125, 0.75),rgba(134, 125, 125, 0.75)),url(/Images/Egg-Layers-Farming.jpg);
+    background-size: cover;
+}
+
+

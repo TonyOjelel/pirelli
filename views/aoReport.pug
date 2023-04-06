@@ -1,0 +1,50 @@
+
+extends dashlayout
+block content
+    .container
+        .row
+            .col-md-4
+                h4.mb-5(style='font-weight:900; font-size:34px;') Poultry Report
+                    .card.card-custom.mx-2.mb-3.my-5(style='width: 25rem; height:15rem; border-radius:25px; border:4px solid magenta; color: olive; background-color:rgb(228, 242, 255, 0.5);')
+                        .card-body
+                            if (totalP == undefined)
+                                p.my-1(style='color:darkslategray;') Ufarm
+                                h5.my-4(style='font-weight:800; font-size:22px;') Total Poultry:0
+                            else
+                                p.my-1(style='color:darkslategray;') Ufarm            
+                                h5.my-4(style='font-weight:800; font-size:22px;') Total Poultry: #{new Intl.NumberFormat().format(totalP.totalQuantity)}
+                                h5.my-4(style='font-weight:800; font-size:24px;') Total Poultry: #{new Intl.NumberFormat().format(totalP.totalCost)} UGX
+            .col-md-4
+                h4.mb-5(style='font-weight:900; font-size:34px;') Dairy Report
+                    .card.card-custom.mx-2.mb-3.my-5(style='width: 25rem; height:15rem; border-radius:25px; border:4px solid cyan; color: seagreen; background-color:rgb(228, 242, 255, 0.5);')
+                        .card-body
+                            if (totalD == undefined)
+                                p.my-1(style='color:darkslategray;') Ufarm
+                                h5.my-4(style='font-weight:800; font-size:22px;') Total Dairy:0
+                            else
+                                p.my-1(style='color:darkslategray;') Ufarm 
+                                h5.my-4(style='font-weight:800; font-size:22px;') Total Dairy: #{new Intl.NumberFormat().format(totalD.totalQuantity)}
+                                h5.my-4(style='font-weight:800; font-size:24px;') Total Dairy: #{new Intl.NumberFormat().format(totalD.totalCost)} UGX
+            
+            .col-md-4
+                h4.mb-5(style='font-weight:900; font-size:34px;') Horticulture Report
+                    .card.card-custom.mx-2.mb-3.my-5(style='width: 27rem; height:15rem; border-radius:25px; border:4px solid  greenyellow; color:steelblue; background-color:rgb(228, 242, 255, 0.5);')
+                        .card-body
+                            if (totalH == undefined)
+                                p.my-1(style='color:darkslategray;') Ufarm
+                                h5.my-4(style='font-weight:800; font-size:22px;') Total Horticulture:0
+                            else
+                                p.my-1(style='color:darkslategray;') Ufarm 
+                                h5.my-4(style='font-weight:800; font-size:22px;') Total Horticulture: #{new Intl.NumberFormat().format(totalH.totalQuantity)}
+                                h5.my-4(style='font-weight:800; font-size:24px;') Total Horticulture: #{new Intl.NumberFormat().format(totalH.totalCost)} UGX
+            .col-md-4(style='margin:auto; text-align:center;')
+                h4(style='font-weight:900; font-size:34px;') Total Sales Report
+                    .card.card-custom.mx-2.mb-3.my-5(style='width: 40rem; height:15rem; border-radius:25px; border:4px solid purple; color:teal; background-color:rgb(228, 242, 255, 0.5); transform:translatex(-105px);')
+                        .card-body
+                            if (totalH == undefined)
+                                p.my-1(style='color:darkslategray;') Ufarm
+                                h5.my-4(style='font-weight:800; font-size:24px;') Total Sales:0
+                            else
+                                p.my-1(style='color:darkslategray;') Ufarm
+                                h5.my-4(style='font-weight:800; font-size:22px;') Total Products: #{new Intl.NumberFormat().format(totalD.totalQuantity + totalH.totalQuantity + totalP.totalQuantity)}.
+                                h5.my-4(style='font-weight:800; font-size:24px;') Total Sales #{new Intl.NumberFormat().format(totalD.totalCost + totalH.totalCost + totalP.totalCost)} UGX 

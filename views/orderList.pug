@@ -1,0 +1,112 @@
+extends dashlayout
+block content
+    style.
+        .list{
+        text-align:center;
+        }
+        .card-title{
+        background: linear-gradient(to bottom,rgb(93, 88, 15),rgba(207, 232, 41, 0.58),rgb(74, 77, 26));
+        color:black;
+        border:24px solid rgb(0,0,0,0.67);
+        padding:8px;
+        font-weight:bolder;
+        font-size:28px;
+        border-radius:15px 30px 15px 30px;
+        }
+        nav{
+        font-weight:bolder;
+        text-align:center;
+        }
+        .nev{
+        background: linear-gradient(to bottom,rgb(15, 93, 93),rgb(41, 232, 232),rgb(26, 77, 77));
+        border-radius:15px 30px 15px 30px;
+        width:20%;
+        padding:8px;
+        border:teal;
+        color: rgb(11, 11, 11,0.87);
+        font-weight:700;
+        //-margin:auto;
+        }
+        .table{
+        width:85%; 
+        margin:auto;
+        border:2px ridge grey; 
+        padding:8px;
+        }
+        thead{
+        font-weight:700;
+        font-size:18px;  
+        }
+        tbody{
+            font-weight:500;
+            font-size:15px;
+        }
+        .form-group{
+            transform:translateY(55px);
+            margin-left:12px;
+            padding:25px;
+            position:absolute;
+            left:0;
+
+        }
+        .btnz{
+            padding:16px;
+            font-size:25px;
+            font-weight:900;
+            color: rgb(11, 11, 11,0.87);
+            background: linear-gradient(to bottom,rgb(61, 15, 155,0.87),rgb(177, 165, 245),rgb(69, 26, 152,0.86));
+            border-radius:25px;
+        }
+        .delete{
+            background: linear-gradient(to bottom,rgb(150, 21, 21),rgb(240, 84, 90),rgb(77, 26, 26));
+            font-size:18px;
+            font-weight:700;
+            color: rgb(11, 11, 11,0.87);
+        }
+        .availability{
+            background:linear-gradient(rgb(66, 65, 65),rgb(224, 216, 216),rgb(62, 61, 61));
+            font-size:18px;
+            font-weight:700;
+            color: rgb(11, 11, 11,0.87);
+            }
+    header.card-header.list
+        h4.card-title List of Booked products
+        br
+    br
+    table.table.table-bordered 
+        thead
+            tr
+                th Produce Name
+                th Price
+                th Quantity
+                th Customer Email
+                th Customer contact
+                th Customer address
+                th Image 
+                th Availability
+                th Update
+                th Delete
+        tbody
+            if orderedGoods.length
+                each orderedGood in orderedGoods
+                    if orderedGood.availability == 'Booked' && orderedGood.wardName === currentUser.wardName 
+                        tr
+                            td #{orderedGood.prodName}
+                            td #{orderedGood.price}
+                            td #{orderedGood.prodQuantity}
+                            td #{orderedGood.customers_Email}
+                            td #{orderedGood.customers_contact}
+                            td #{orderedGood.customers_address}
+                            td 
+                                img(src="/"+orderedGood.prodImage, alt="Image" width='150px' height="150px")
+                            td #{orderedGood.availability} 
+                            td                            
+                                a.btn.btn-primary.btn-block.availability(href='/produce/available/'+orderedGood._id) Update
+                            td
+                                form(method="post" action='/produce/delete')
+                                    input(type="hidden" placeholder="" name="id", value=orderedGood._id)
+                                    button.btn.btn-danger.btn-block(type="submit") Delete
+    div.form-row
+        div.col.form-group
+            a.btn.btnz(class='button' href='/foDashboard') << Back
+

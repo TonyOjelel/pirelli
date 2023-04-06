@@ -1,0 +1,250 @@
+doctype html
+head
+  title Products page
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  // Bootstrap CSS v5.2.1
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT' crossorigin='anonymous')
+  link(rel='stylesheet' href='css/homepage.css')
+  link(rel='icon' href='./Img/favicon.png')
+  link(href='https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Nabla&family=Rubik+Dirt&family=Rubik+Marker+Hatch&display=swap' rel='stylesheet')
+  link(href='https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Lato:wght@900&family=Nabla&family=Oswald:wght@900&family=Rubik+Dirt&family=Rubik+Marker+Hatch&display=swap' rel='stylesheet')
+  link(href='https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Cinzel:wght@700&family=Lato:wght@900&family=Nabla&family=Oswald:wght@700&family=Rubik+Dirt&family=Rubik+Marker+Hatch&display=swap' rel='stylesheet')
+header
+  // place navbar here
+  .header-navbar
+    nav#navbar.navbar.navbar-light.fixed-top
+      .container-fluid
+        img.logo(src='/Img/favicon.png')
+        p.title(style="transform:translateX(-262px);") Massajja Urban Farm
+        .logo-list( style="transform:translateX(-100px);")
+          ul
+            li
+              a.btn.text-secondary.btm(href='/home' type='button') Home
+            li
+              a(href='/carAccess') Careers
+            li
+              a#dropdownId.dropdown-toggle(href='#' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Projects
+              .dropdown-menu.bg-dark(aria-labelledby='dropdownId')
+                a.dropdown-item(href='/horticulture' style='color:teal ;') Horticulture
+                a.dropdown-item(href='/poultry' style='color:teal ;') Poultry
+                a.dropdown-item(href='/diary' style='color:teal ;') Dairy
+            li
+              a(href='/about') About us
+            li
+              form(action='/logout' method='POST')
+                button.btn.logout(type='submit') Log out
+// MAIN
+main(style='background:linear-gradient(to bottom,rgba(22, 102, 35),rgba(61, 237, 72),rgba(22, 102, 35)); border-radius: 5px; padding: 10 20px; transform:translateY(40px);')
+  .container.my-5
+    .row.justify-content-center.align-items-center.g-2.my-5
+      .col.my-5
+        .row
+          .col-md-4
+            .card(style='width: 18rem;')
+              img.Images(src='Img/product-images/Sweet-potatoes-ca0d8f4.jpeg')
+              .card-body
+                h5.card-title Sweet potato
+                a.btn-2.mr-2(href='#')
+                  i.fas.fa-link
+                  span
+                  | Order
+                a.btn-2(href='#')
+                  i.fab.fa-github
+                  span
+                  | Book
+          .col-md-4
+            .card(style='width: 18rem;')
+              img.card-img-top(src='Img/product-images/images(1).jpeg' alt='...')
+              .card-body
+                h5.card-title Cassava
+                a.btn-2.mr-2(href='#')
+                  i.fas.fa-link
+                  span
+                  | Order
+                a.btn-2(href='#')
+                  i.fab.fa-github
+                  span
+                  | Book
+          .col-md-4
+            .card(style='width: 18rem;')
+              img.card-img-top(src='Img/product-images/2021-alliance-uganda-project-image-scaled.jpg' alt='...')
+              .card-body
+                h5.card-title Banana
+                a.btn-2.mr-2(href='#')
+                  i.fas.fa-link
+                  span
+                  | Order
+                a.btn-2(href='#')
+                  i.fab.fa-github
+                  span
+                  | Book
+          .col-md-4
+            .card(style='width: 18rem;')
+              img.card-img-top(src='Img/product-images/images(4).jpeg' alt='...')
+              .card-body
+                h5.card-title Chicken
+                a.btn-2.mr-2(href='#')
+                  i.fas.fa-link
+                  span
+                  | Order
+                a.btn-2(href='#')
+                  i.fab.fa-github
+                  span
+                  | Book
+          .col-md-4
+            .card(style='width: 18rem;')
+              img.card-img-top(src='Img/product-images/images(9).jpeg' alt='...')
+              .card-body
+                h5.card-title Milk
+                a.btn-2.mr-2(href='#')
+                  i.fas.fa-link
+                  span
+                  | Order
+                a.btn-2(href='#')
+                  i.fab.fa-github
+                  span
+                  | Bookings
+          .col-md-4
+            .card(style='width: 18rem;')
+              img.card-img-top(src='Img/product-images/images(15).jpeg' alt='...')
+              .card-body
+                h5.card-title Cocoa
+                a.btn-2.mr-2(href='#')
+                  i.fas.fa-link
+                  span
+                  | Order
+                a.btn-2(href='#')
+                  i.fab.fa-github
+                  span
+                  | Book
+          .col-md-4
+            .card(style='width: 18rem;')
+              img.card-img-top(src='Img/product-images/images(14).jpeg' alt='...')
+              .card-body
+                h5.card-title Lettuce
+                a.btn-2.mr-2(href='#')
+                  i.fas.fa-link
+                  span
+                  | Order
+                a.btn-2(href='#')
+                  i.fab.fa-github
+                  span
+                  | Book
+          .col-md-4
+            .card(style='width: 18rem;')
+              img.card-img-top(src='Img/product-images/l-intro-1658690595.jpg' alt='...')
+              .card-body
+                h5.card-title Irish Potatoes
+                a.btn-2.mr-2(href='#')
+                  i.fas.fa-link
+                  span
+                  | Order
+                a.btn-2(href='#')
+                  i.fab.fa-github
+                  span
+                  | Book
+          .col-md-4
+            .card(style='width: 18rem;')
+              img.card-img-top(src='Img/product-images/images(3).jpeg' alt='...')
+              .card-body
+                h5.card-title Beans &amp; Peas
+                a.btn-2.mr-2(href='#')
+                  i.fas.fa-link
+                  span
+                  | Order
+                a.btn-2(href='#')
+                  i.fab.fa-github
+                  span
+                  | Book
+          .col-md-4
+            .card(style='width: 18rem;')
+              img.card-img-top(src='Img/product-images/two-red-onions-isolated_269543-681.jpg' alt='...')
+              .card-body
+                h5.card-title Onions
+                a.btn-2.mr-2(href='#')
+                  i.fas.fa-link
+                  span
+                  | Order
+                a.btn-2(href='#')
+                  i.fab.fa-github
+                  span
+                  | Book
+          .col-md-4
+            .card(style='width: 18rem;')
+              img.card-img-top(src='Img/product-images/images(2).jpeg' alt='...')
+              .card-body
+                h5.card-title Green pepper
+                a.btn-2.mr-2(href='#')
+                  i.fas.fa-link
+                  span
+                  | Order
+                a.btn-2(href='#')
+                  i.fab.fa-github
+                  span
+                  | Book
+          .col-md-4
+            .card(style='width: 18rem;')
+              img.card-img-top(src='Img/product-images/Tomatoes.jpg' alt='...')
+              .card-body
+                h5.card-title Tomatoes
+                a.btn-2(href='#')
+                  i.fas.fa-link
+                  span
+                  | Order
+                a.btn-2(href='#')
+                  i.fab.fa-github
+                  span
+                  | Book
+  fieldset.note
+    legend
+      strong NOTE
+      br
+      small This information is important to our customers.
+    h4
+      | For more products, checkout our projects . 
+      br
+      |  This will help you to find the products of your choice easily. 
+      br
+      |  Each project contains its specific products, so click the projects as indicated in the navbar above.
+footer(style='margin-top:40px;')
+  // place footer here
+  // <div class="container-fluid  ctn">
+  .footer-logo
+    h1 Ufarm Project
+  .footer-lists
+    .list
+      h6 About Us
+      ul
+        p
+          | Our Farm deals in different kinds 
+          br
+          | of products and these include:
+        li Horticulture Produce
+        li Poultry Produce
+        li Dairy Produce
+    .list
+      h6 Contact Us
+      ul
+        li Tel: 0789585624
+        li Tel: 0708930915
+        li Email: kayanjajohn27@gmail.com
+    .list
+      h6 Location
+      ul
+        li
+          .mapouter
+            .gmap_canvas
+              iframe#gmap_canvas(width='200' height='200' src='https://maps.google.com/maps?q=Massajja%20&t=&z=13&ie=UTF8&iwloc=&output=embed' frameborder='0' scrolling='no' marginheight='0' marginwidth='0')
+              a(href='https://putlocker-is.org')
+              br
+              style.
+                .mapouter{position:relative;text-align:right;height:200px;width:200px;}
+              a(href='https://www.embedgooglemap.net') google map responsive
+              style.
+                .gmap_canvas {overflow:hidden;background:none!important;height:200px;width:200px;}
+    // </div>
+// Bootstrap JavaScript Libraries
+script(src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js' integrity='sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3' crossorigin='anonymous')
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js' integrity='sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz' crossorigin='anonymous')

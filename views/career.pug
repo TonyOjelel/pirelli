@@ -1,0 +1,167 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  title Career page
+  link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto|Varela+Round')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+  script(src='https://code.jquery.com/jquery-3.5.1.min.js')
+  script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js')
+  style.
+    body {
+    background:linear-gradient(90deg,rgba(2, 42, 1, 0.9),rgba(29, 133, 23, 0.67));
+    background-size: cover;
+    font-family: 'Varela Round', sans-serif;
+    }
+    .modal-confirm {
+    color: #636363;
+    width: 550px;
+    }
+    .modal-confirm .modal-content {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    }
+    .modal-confirm .modal-header {
+    padding: 0 15px;
+    border-bottom: none;
+    position: relative;
+    }
+    .modal-confirm h4 {
+    display: inline-block;
+    font-size: 26px;
+    }
+    .modal-confirm .close {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    }
+    .modal-confirm .modal-body {
+    color: #999;
+    }
+    .modal-confirm .modal-footer {
+    background: #ecf0f1;
+    border-color: #e6eaec;
+    text-align: right;
+    margin: 0 -20px -20px;
+    border-radius: 0 0 5px 5px;
+    }
+    .modal-confirm .btn {
+    color: #fff;
+    border-radius: 4px;
+    transition: all 0.4s;
+    border: none;
+    padding: 8px 20px;
+    outline: none !important;
+    }
+    .modal-confirm .btn-danger {
+    background: #2e6474;
+    }
+    .modal-confirm .btn-danger:hover, .modal-confirm .btn-danger:focus {
+    background: #92a9af;
+    box-shadow: 0;
+    outline: none;
+    border: 0;
+    color: black;
+    }
+    .modal-confirm .btn-success {
+    background: #419001;
+    }
+    .modal-confirm .btn-success:hover, .modal-confirm .btn-success:focus {
+    background: #54ee35;
+    color: black;
+    }
+    .modal-confirm .modal-footer .btn + .btn {
+    margin-left: 10px;
+    }
+    .trigger-btn {
+    display: inline-block;
+    margin: 100px auto;
+    border: 0;
+    }
+    .trigger-btn:focus{
+    box-shadow: 0;
+    outline: none;
+    border: 0;
+    }
+    .submit{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 900;
+    }
+    .btnz button{
+    width: 14%;
+    padding: 8px;
+    background: rgb(11, 11, 11,0.4);
+    border: 1px solid rgb(5, 135, 161,0.26);
+    border-radius: 5px;
+    box-shadow:2px 2px 6px 4px rgba(2, 29, 35, 0.86);
+    border-top: 0;
+    border-bottom: 0;
+    overflow: hidden;
+    position: relative;
+    color: rgb(166, 170, 174);
+    cursor: pointer;
+    }
+    span{
+    background: #fffb00;
+    width: 0;
+    height: 100%;
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.6s;
+    }
+    .btnz button:hover span{
+    width: 100%;
+    }
+    .btnz button:hover{
+    border: none;
+    border-top: 0;
+    color: black;
+    }
+    .text-center{
+    transform: translateY(100px);
+    }
+    .descrip{
+    margin: auto;
+    width: 98%;
+    padding: 25px;
+    background: rgb(12, 12, 12,0.5);
+    }
+    .descrip,h1 , h3{
+    font-size: 55px;
+    color: rgb(255, 255, 255,0.8);
+    }
+    bold{
+    color: orange;
+    font-size: 35px;
+    }
+.text-center
+  // Button HTML (to Trigger Modal)
+  .descrip
+    h1 Welcome to our page. 
+    h3 Are you ready to start your career with the Ufarm Team?
+    h4
+      bold If ready, lets start our journey
+      | .
+  .submit
+    .btnz
+      button.trigger-btn(type='submit' href='#myModal' data-toggle='modal')
+        span
+        | Get started
+// Modal HTML
+#myModal.modal.fade
+  .modal-dialog.modal-confirm
+    .modal-content
+      .modal-header
+        h4.modal-title Confirmation
+        button.close(type='button' data-dismiss='modal' aria-hidden='true') &times;
+      .modal-body
+        p For admins only plus those who want to be members of the Ufarm team.
+      .modal-footer
+        a.btn.btn-danger(href='#' data-dismiss='modal') Cancel
+        a.btn.btn-success(href='/login') Continue! 

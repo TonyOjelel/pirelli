@@ -1,0 +1,111 @@
+doctype html
+head
+  title Upload produce
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  // Bootstrap CSS v5.2.1
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT' crossorigin='anonymous')
+  link(rel='stylesheet' href='css/Form.css')
+header
+  // place navbar here
+main
+  .container(style='transform:translateY(10px);')
+    h2 Urban Farmer Produce Upload
+    hr
+    .row.justify-content-center.align-items-center.my-5.cage
+      .col-lg-2.cage
+        form(action='/prodUpload' name='Uploading' enctype="multipart/form-data" method="POST"  onsubmit='return Validation3();')
+          .row.justify-content-center.align-items-center.g-2.lamar
+            .col-lg-3.form-zones
+              label Supplier name:
+              select#select.form-select(name='supplierName')
+                if urbanfarmers.length
+                  each urbanfarmer in urbanfarmers
+                    option(value='')
+                    option(value=urbanfarmer._id) #{urbanfarmer.userName+' '+urbanfarmer.lastName}
+              small#suppliererr
+            .col-lg-3.form-zones
+              label Product name:
+              input.form-inputs(name='prodName' type='text')
+              small#prodNameerr
+            .col-lg-3.form-zones
+              label Date of upload:
+              input.form-inputs(name='regDate' type='date')
+              small#regDateerr
+            .col-lg-3.form-zones
+              label Upload image:
+              input.form-inputs(name='prodImage' type='file' style='padding:0;')
+              small#imageerr
+            .col-lg-3.form-zones
+              label Product Category:
+              select#select.form-select(name='prodCategory')
+                option(value='' style='text-align:center;') Select option
+                option(value='Horticulture') &#x1F34F; Horticulture
+                option(value='Poultry') &#x1F414;Poultry
+                option(value='Dairy') &#x1F404;Dairy
+              small#categoryerr
+            .col-lg-3.form-zones
+              label Unique No:
+              select#select.form-select(name='uniqueNumber')
+                if urbanfarmers.length
+                  each urbanfarmer in urbanfarmers
+                    option(value='')
+                    option(value=urbanfarmer.uniqueNumber) #{urbanfarmer.uniqueNumber}
+              small#uniqueNumbererr
+            .col-lg-3.form-zones
+              label Ward:
+              select#select.form-select(name='wardName')
+                if urbanfarmers.length
+                      each urbanfarmer in urbanfarmers
+                          option(value='')
+                          option(value=urbanfarmer.wardName) #{urbanfarmer.wardName}
+              small#wardNameerr
+              input.form-inputs(name="customers_Email" type='hidden')
+              input.form-inputs(name="customers_contact" type='hidden')
+              input.form-inputs(name="customers_address" type='hidden')
+            .col-lg-3.form-zones
+              label Stock:
+              input.form-inputs(name='prodStock' type='text' placeholder='kg/ltrs/gm:')
+              small#stockerr
+            .col-lg-3.form-zones
+              label Quantity:
+              input.form-inputs(name='prodQuantity' type='number' style='padding:0;')
+              small#quantityerr
+            .col-lg-5.form-radio
+              label Product type:
+              .radio
+                | Organic
+                input(type='radio' name='prodType' value='Organic' checked='')
+                |             Non-Organic
+                input(type='radio' name='prodType' value='Non-organic')
+            .col-lg-3.form-zones
+              label Mode of payment:
+              select#select.form-select(name='paymentMode')
+                option(value='' style='text-align:center;')
+                option(value='Mobile money') Mobile money
+                option(value='Pay with cash') Pay with cash
+              small#moperr
+            .col-sm-12.col-lg-3.form-zones
+              label Price:
+              input.form-inputs(type='number' name='price' placeholder='Ugx:')
+              small#priceerr
+            .col-lg-3.form-zones
+              label Mode of Delivery:
+              select#select.form-select(name='deliveryMode')
+                option(value='' style='text-align:center;') 
+                option(value='Pick up') Pick up
+                option(value='Home delivery') Home delivery
+              small#moderr
+            .col-lg-3.form-zones
+              label Direction:
+              input.form-inputs(type='text' name='direction')
+              small#directionerr
+            hr.boundary
+            .submit
+              .btnz(style='transform:translateY(18px);')
+                button(type='submit')
+                  span
+                  | UPLOAD
+footer
+script(src="/js/prodUploadValidation.js") 

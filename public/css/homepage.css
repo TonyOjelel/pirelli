@@ -1,0 +1,277 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+    background: linear-gradient(rgb(0, 0, 0,0.45),rgb(0, 0, 0,0.45)),url(/img/evening-messages-1.jpeg) fixed;
+    background-size: cover;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+   
+/* NAVBAR */
+.menu{
+  color: rgb(255, 255, 255);
+  background: rgb(8, 15, 24);
+}
+.menu input{
+  background: rgb(215, 209, 209);
+}
+.header-navbar{
+    background: rgb(11, 11, 11,0.75);
+    padding: 4px;
+}
+#navbar{
+    background: rgb(11, 11, 11,0.95);
+    /* background:linear-gradient(to bottom,rgb(72, 192, 35),rgb(94, 243, 56),rgb(66, 192, 35)); */
+}
+
+.logo{
+    width: 8pc;
+    height: 12vh;
+    border-radius:5px;
+    transform: translateX(-6px);
+}
+
+.title{
+    font-size: 35px;
+    color: rgb(132, 250, 15);
+    margin-top: 12px;
+    margin-right:-82px ;
+    font-family: 'Rubik Marker Hatch',Arial, Helvetica, sans-serif;
+}
+
+.dropdown-item{
+  font-family: 'Cinzel', serif;
+}
+
+.logo-list ul li a{
+    text-decoration: none;
+    color: rgb(103, 240, 23);
+}
+.logo-list ul li{
+    font-size: 15px;
+    font-family: 'Oswald', sans-serif;
+    list-style: none;
+    display:inline-block;
+    padding: 8px;
+    margin-right: 12px;
+    transform: translateX(55px );
+    margin-top: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+}
+
+.logout{
+  background: linear-gradient(to bottom,rgb(15, 93, 93),rgb(41, 232, 232),rgb(26, 77, 77));
+  color:black; 
+  border:teal; 
+  font-weight:700;
+  font-size:18px;
+  padding-top:8px;
+  padding-bottom:8px;
+}
+
+.logo-list ul li::after{
+    background: #009688;
+    content:'';
+    height: 4px;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+    z-index: -1;
+
+}
+.logo-list ul li:hover:after{
+    width: 100%;
+}
+.logo-list ul li :active{
+    color: azure;
+    transition: 0.5s;
+}
+.btm{
+  margin-right: 8px;
+}
+.btm:focus{
+border:0;
+}
+
+
+
+  /* MAIN */
+
+  main{
+    padding-bottom: 55px;
+  }
+  .container-main{
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 24px;
+  } 
+
+  .description{
+    padding: 4px;
+    margin: auto;
+    width: 50%;
+    background: rgba(0, 0, 0, 0.85);
+    text-align: center;
+    color: rgb(255, 255, 255,0.88);
+    border-radius: 12px;
+    transform: translateY(160px);
+    border: 4px solid rgb(2, 127, 111);
+  }
+
+  .card {
+    height: 40vh;
+    background: linear-gradient(rgb(0, 175, 152),rgb(1, 189, 164));
+    border: 2px solid rgba(195, 34, 210, 0.78);
+    box-shadow:2px 2px 4px 6px rgba(78, 19, 78, 0.56);
+    color: rgba(250, 250, 250);
+    margin-bottom: 2rem;
+    /* transform: translateY(25%); */
+    margin-top: 72px;
+  }
+
+  .card:hover{
+    box-shadow:0 0 6px 5px rgb(0,0,0,0.87); 
+    transform: scale(1.5);
+    z-index: 9;
+    transition: ease-in-out 0.6s; 
+}
+
+
+.oz:hover{
+   box-shadow:0 0 12px 8px rgb(0,0,0,0.77);
+  transform:none;
+  z-index:none;
+  transform: translateY(10px);
+  transition: ease-in-out 0.6s; 
+}
+
+
+  img{
+    height: 23vh;
+    border-radius: 5px;
+  }
+  
+  .card-title{
+    transform: translateY(-12px);
+    font-weight: 900;
+  }
+
+  
+.d-block{
+  height: 100vh;
+  margin-top:115px;
+}
+
+  .btn-2 {
+    
+    margin-right: 24px;
+    margin-bottom: 12px;
+    font-family: 'lato', serif;
+    text-decoration: none;
+    width: 100%;
+    height: 3hv;
+    border-radius: 8px;
+    border: 2px solid rgb(102, 18, 94);
+    transition:ease-in-out 0.5s;
+    padding: 8px;
+    background: rgba(130, 17, 119, 0.8);
+    transform: translateY(30px);
+    overflow: hidden;
+    position: relative;
+    color: rgb(249, 249, 249);
+    cursor: pointer;
+  }
+  span{
+    border-radius: 8px;
+    background: #18a739;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+  }
+
+  .btn-2:hover span{
+    width: 100%;
+  }
+
+  .btn-2:hover{
+    border: none;
+    color: #100e11;
+  }
+
+ .note{
+  margin:80px auto;
+  width: 95%;
+  height: 35vh;
+  padding: 12px;
+  background: #000;
+  border: 2px solid rgb(201, 19, 19);
+  border-radius: 12px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+ } 
+ strong{
+  color: rgb(254, 4, 4);
+  
+  
+ }
+ small{
+  color: #aa7ee7;
+  text-decoration: underline 3px rgba(241, 5, 60);
+ }
+
+
+footer{
+    color: rgb(255, 255, 255,0.8);
+    background: rgb(0, 0, 0,0.86);
+    width: 100%;
+    height:50vh;
+    padding: 28px;
+
+
+}
+.footer-logo{
+  font-family: 'Rubik Marker Hatch', cursive;
+  color: lawngreen;
+}
+
+.footer-lists{
+  font-family: 'Oswald', sans-serif;
+    display:inline-flex;
+    margin-top: 6px;
+    transform: translateX(320px);
+}
+
+ .list {
+    margin-right: 75px;
+
+}
+
+.list h6{
+  color: rgb(219, 34, 117);
+  font-size:25px ;
+}
+
+.list li{
+  margin-bottom: 5px;
+    list-style:none;
+    color: rgba(31, 199, 143);
+    font-size: 16px;
+}
+.mapouter{
+  margin-top: -16px;
+  transform: translatex(80px);
+}

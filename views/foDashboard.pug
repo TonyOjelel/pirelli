@@ -1,0 +1,67 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Farmer One dashboard
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT' crossorigin='anonymous')
+  link(rel='stylesheet' href='css/dashboard.css')
+header
+  ul(style='list-style:none; float:left;')
+      li(style='transform:translateY(15px); font-weight:700; color:purple;')
+        span #{currentUser.wardName}
+  h1 Farmer One
+  ul(style='list-style:none; float:right;')
+    li(style='transform:translateY(-45px); font-weight:700; color:white;')
+      span #{currentUser.userName+' '+currentUser.lastName}
+main
+  .container-fluid(style='transform:translatex(120px);')
+      .row.justify-content-center.align-items-center.g-2
+        .col-lg-5.cards.my-5
+          .card
+            a(href='/ufReg')
+              img.card-img-top(src='Img/kenyan-farmer.jpg' alt='Title')
+            .card-body
+              h3.card-title Urban Farmer Registration
+              p.card-text For the registration of all the Urban Farmers only.
+        .col-lg-5.cards.my-5
+          .card
+            a(href='/ufList')
+              img.card-img-top(src='Img/My-Urban-Farmers-.jpg' alt='Title')
+            .card-body
+              h3.card-title Urban Farmer List
+              p.card-text The list of Urban Farmers on the Ufarm team.
+        .col-lg-5.cards
+          .card
+            a(href='/orders')
+              img.card-img-top(src='Img/Customers.jpg' alt='Title')
+            .card-body
+              h3.card-title Orders/Bookings
+              p.card-text List of ordered/booked products
+        .col-lg-5.cards
+          .card
+            a(href='/prodList')
+              img.card-img-top(src='Img/product-images/images.jpeg' alt='Title')
+            .card-body
+              h3.card-title Urban Farmer Uploads
+              p.card-text List of Uploaded products
+        .col-lg-5.cards
+          .card
+            a(href='/foReport')
+              img.card-img-top(src='Img/morning-farm-report.jpg' alt='Title')
+            .card-body
+              h3.card-title Report
+              p.card-text Report of the Project results
+        .col-lg-5.cards
+          .card
+            a(href='/stocking')
+              img.card-img-top(src='Img/shiny-button-style-check-mark-cross-symbols.jpg' alt='Title')
+            .card-body
+              h3.card-title N/A Products
+              p.card-text Update products  not available(N/A)
+
+div.form-row
+  div.col.form-group
+      a.btn.btn7(class='button' href='/home') << Back
+footer
+  h3 Ufarm Project

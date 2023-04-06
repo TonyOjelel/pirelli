@@ -1,0 +1,110 @@
+extends dashlayout
+block content
+    style.
+        .list{
+        text-align:center;
+        }
+        .card-title{
+        background: linear-gradient(to bottom,rgb(93, 88, 15),rgba(207, 232, 41, 0.58),rgb(74, 77, 26));
+        color:black;
+        border:24px solid rgb(0,0,0,0.67);
+        padding:8px;
+        font-weight:bolder;
+        font-size:28px;
+        border-radius:15px 30px 15px 30px;
+        }
+        nav{
+        font-weight:bolder;
+        text-align:center;
+        }
+        .nev{
+        background: linear-gradient(to bottom,rgb(15, 93, 93),rgb(41, 232, 232),rgb(26, 77, 77));
+        border-radius:15px 30px 15px 30px;
+        width:20%;
+        padding:8px;
+        border:teal;
+        color: rgb(11, 11, 11,0.87);
+        font-weight:700;
+        //-margin:auto;
+        }
+        .table{
+            text-align:center;
+        width:85%; 
+        margin:auto;
+        border:2px ridge grey; 
+        padding:8px;
+        }
+        thead{
+        font-weight:700;
+        font-size:18px;  
+        }
+        tbody{
+            font-weight:500;
+            font-size:15px;
+        }
+        .form-group{
+            transform:translateY(55px);
+            margin-left:12px;
+            padding:25px;
+            position:absolute;
+            left:0;
+
+        }
+        .btnz{
+            padding:16px;
+            font-size:25px;
+            font-weight:900;
+            color: rgb(11, 11, 11,0.87);
+            background: linear-gradient(to bottom,rgb(61, 15, 155,0.87),rgb(177, 165, 245),rgb(69, 26, 152,0.86));
+            border-radius:25px;
+        }
+        .delete{
+            background: linear-gradient(to bottom,rgb(150, 21, 21),rgb(240, 84, 90),rgb(77, 26, 26));
+            font-size:18px;
+            font-weight:700;
+            color: rgb(11, 11, 11,0.87);
+        }
+        .availability{
+            background: linear-gradient(to bottom,rgb(21, 150, 64),rgb(180, 240, 84),rgb(26, 77, 29));	
+            color:rgb(25, 90, 90);
+            font-size:18px;
+            font-weight:700;
+            }
+        
+    header.card-header.list
+        h4.card-title Urban farmer products List 
+        br
+    br
+    table.table.table-bordered
+        thead
+            tr
+                th Image 
+                th Produce Name
+                th Quantity
+                th Stock/weight (kg/ltrs/gm..)
+                th Price (Ugx)
+                th Product type
+                th Category
+                th Mode of Delivery
+                th Mode of Payment
+                th Status
+        tbody
+            if urbarnfarmerprods.length
+                each urbarnfarmerprod in urbarnfarmerprods
+                    if urbarnfarmerprod.wardName === currentUser.wardName && urbarnfarmerprod.uniqueNumber === currentUser.uniqueNumber 
+                        tr
+                            td 
+                                img(src="/"+urbarnfarmerprod.prodImage, alt="Image" width='150px' height="150px")
+                            td #{urbarnfarmerprod.prodName}
+                            td #{urbarnfarmerprod.prodQuantity}
+                            td #{urbarnfarmerprod.prodStock}
+                            td #{new Intl.NumberFormat().format(urbarnfarmerprod.price)}
+                            td #{urbarnfarmerprod.prodType}
+                            td #{urbarnfarmerprod.prodCategory}
+                            td #{urbarnfarmerprod.deliveryMode}
+                            td #{urbarnfarmerprod.paymentMode}
+                            td #{urbarnfarmerprod.status}
+    div.form-row
+        div.col.form-group
+            a.btn.btnz(class='button' href='/ufDashboard') << Back
+

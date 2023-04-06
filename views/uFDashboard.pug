@@ -1,0 +1,46 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Urban Farmer dashboard
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT' crossorigin='anonymous')
+  link(rel='stylesheet' href='css/dashboard.css')
+header
+  ul(style='list-style:none; float:left;')
+    li(style='transform:translateY(15px); font-weight:700; color:purple;')
+      span #{currentUser.wardName}
+  h1 Urban Farmer
+  ul(style='list-style:none; float:right;')
+    li(style='transform:translateY(-45px); font-weight:700; color:white;')
+      span #{currentUser.userName+' '+currentUser.lastName}
+main
+  .container(style='transform:translatex(55px);')
+    .row.justify-content-center.align-items-center.g-2
+      .col-lg-5.cards.my-5
+        .card
+          a(href='/prodUpload')
+            img.card-img-top(src='Img/Ufarm team.jpg' alt='Title')
+          .card-body
+            h3.card-title Produce Upload
+            p.card-text This is where Urban farmers upload their products.
+
+      .col-lg-5.cards
+        .card
+          a(href='/ufprodList')
+            img.card-img-top(src='Img/product-images/images.jpeg' alt='Title')
+          .card-body
+            h3.card-title  Uploads
+            p.card-text List of Uploaded products
+      .col-lg-5.cards
+        .card
+          a(href='/ufReport')
+            img.card-img-top(src='Img/morning-farm-report.jpg' alt='Title')
+          .card-body
+            h3.card-title Report
+            p.card-text Report of the Project results
+  div.form-row
+    div.col.form-group
+        a.btn.btn7(class='button' href='/home') << Back
+footer
+  h3 Ufarm Project
