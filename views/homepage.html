@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Homepage</title><!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!-- Bootstrap CSS v5.2.1-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/css/homepage.css">
+    <link rel="icon" href="./Img/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&amp;family=Nabla&amp;family=Rubik+Dirt&amp;family=Rubik+Marker+Hatch&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&amp;family=Lato:wght@900&amp;family=Nabla&amp;family=Oswald:wght@900&amp;family=Rubik+Dirt&amp;family=Rubik+Marker+Hatch&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&amp;family=Cinzel:wght@700&amp;family=Lato:wght@900&amp;family=Nabla&amp;family=Oswald:wght@700&amp;family=Rubik+Dirt&amp;family=Rubik+Marker+Hatch&amp;display=swap" rel="stylesheet">
+</head>
+<header>
+    <!-- place navbar here-->
+    <div class="header-navbar">
+        <nav class="navbar navbar-light fixed-top" id="navbar">
+            <div class="container-fluid"><img class="logo" src="./Img/favicon.png">
+                <p class="title" style="transform:translateX(-280px);">Ufarm Project</p>
+                <div class="logo-list" style="transform:translateX(-60px);">
+                    <ul>
+                        <li>
+                            <div class="text-info btm" type="button" data-bs-toggle="offcanvas" data-bs-target="#Id1" aria-controls="Id1">Menu</div>
+                        </li>
+                        <li><a href="/products">Shopping List</a></li>
+                        <li><a href="/carAccess">Careers</a></li>
+                        <li><a class="dropdown-toggle" id="dropdownId" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
+                            <div class="dropdown-menu bg-dark" aria-labelledby="dropdownId"><a class="dropdown-item" href="/horticulture" style="color:teal ;">Horticulture</a><a class="dropdown-item" href="/poultry" style="color:teal ;">Poultry</a><a class="dropdown-item" href="/dairy" style="color:teal ;">Dairy</a></div>
+                        </li>
+                        <li><a href="/about">About us</a></li>
+                        <li>
+                            <form action="/login" method="POST"><button class="btn logout" type="submit">Log in</button></form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="offcanvas offcanvas-start menu" id="Id1" data-bs-scroll="true" tabindex="-1" aria-labelledby="Enable both scrolling &amp; backdrop">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="Enable both scrolling &amp; backdrop">Massajja Urban Farming <br>Initiative</h5><button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body"><button class="btn text-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"> Home</button>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/login">Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/products">Customers</a></li>
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="dropdownId" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownId"><a class="dropdown-item" href="Horticulture">Horticulture</a><a class="dropdown-item" href="Poultry">Poultry</a><a class="dropdown-item" href="Dairy">Dairy</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header><!-- MAIN-->
+<main style="background:linear-gradient(to bottom,rgba(42, 192, 35),rgba(61, 237, 72),rgba(42, 192, 35));">
+    <div class="container-main">
+        <div class="description" style="margin-bottom:125px;">
+            <h1>Welcome to the new stage of farming. </h1>
+            <h3>We&apos;re here to serve you with farming skills and agricultural products</h3>
+            <p>We provide our customers with fresh organic and non-organic farm products. <br> Our farm deals in Horticulture, dairy and poultry products.</p>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="row justify-content-center align-items-center g-2 my-5">
+            <div class="col my-5">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card oz" style="width: 25rem;"><img class="Images" src="Img/Customers.jpg">
+                            <div class="card-body">
+                                <h5 class="card-title">Shopping (Products for customers)</h5><a class="btn-2 px-4 mr-2" href="/products"><span></span>Shop</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card oz" style="width: 25rem;"><img class="card-img-top" src="Img/Ufarm team.jpg" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Careers (Ufarm team)</h5><a class="btn-2 px-4 mr-2" href="/carAccess"><span></span>Visit</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card oz" style="width: 25rem;"><img class="card-img-top" src="Img/images (25).jpeg" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Help</h5><a class="btn-2 px-4 mr-2" href="/help"><span></span>Visit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <!-- place footer here-->
+    <!-- <div class="container-fluid  ctn">-->
+    <div class="footer">
+        <div class="footer-logo">
+            <h1>Ufarm Project</h1>
+        </div>
+    </div>
+    <div class="footer-lists">
+        <div class="list">
+            <h6>About Us</h6>
+            <ul>
+                <p>Our Farm deals in different kinds <br>of products and these include:</p>
+                <li>Horticulture Produce</li>
+                <li>Poultry Produce</li>
+                <li>Dairy Produce</li>
+            </ul>
+        </div>
+        <div class="list">
+            <h6>Contact Us</h6>
+            <ul>
+                <li>Tel: +256789585624</li>
+                <li>Tel: +256708930915</li>
+                <li>Email: ufarm001@gmail.com</li>
+                <li>Email: masajjaurbanf@gmail.com</li>
+            </ul>
+        </div>
+        <div class="list">
+            <h6>Location</h6>
+            <ul>
+                <li>
+                    <div class="mapouter">
+                        <div class="gmap_canvas"><iframe id="gmap_canvas" width="200" height="200" src="https://maps.google.com/maps?q=Massajja%20&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://putlocker-is.org"></a><br>
+                            <style>
+                                .mapouter {
+                                    position: relative;
+                                    text-align: right;
+                                    height: 200px;
+                                    width: 200px;
+                                }
+                            </style><a href="https://www.embedgooglemap.net">google map responsive</a>
+                            <style>
+                                .gmap_canvas {
+                                    overflow: hidden;
+                                    background: none !important;
+                                    height: 200px;
+                                    width: 200px;
+                                }
+                            </style>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div><!-- </div>-->
+</footer><!-- Bootstrap JavaScript Libraries-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>

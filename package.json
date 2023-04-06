@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
   },
-  "author": "Kayanja John",
+  "author": "Ojelel Tony Ochol",
   "license": "ISC",
   "dependencies": {
     "connect-ensure-login": "^0.1.1",
