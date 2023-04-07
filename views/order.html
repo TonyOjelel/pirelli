@@ -1,14 +1,16 @@
-doctype html
-head
-    meta(charset='UTF-8')
-    meta(http-equiv='X-UA-Compatible' content='IE=edge')
-    meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    link(rel='stylesheet' href='bootstrap-css/css/bootstrap.css')
-    link(rel='stylesheet' href='css/style.css')
-    title Registration
-    style.
-
-        body{
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-css/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Registration</title>
+</head>
+<style>
+    body{
             background-color:powderblue;
             font-family:Helvetica;  
         }
@@ -94,26 +96,41 @@ head
             padding:12px;
               background: linear-gradient(to bottom,rgba(120, 80, 213),rgba(147, 240, 218),rgba(156, 240, 218));
         }
-    .container.form-style
-        form#signup.form(action='/produce/order/?id='+orderProd._id name='registration' method='POST')
-            h3 Products booking/ordering
-            hr
-            .row
-                .col
-                    .form-field
-                        label(for='availability') Product booked:
-                        select(name='availability')
-                            option(value="Booked" selected = orderProd.availability === 'Booked') Booked
-                    .form-field
-                        label customers' Email
-                        input(type="email" name="customers_Email")
-                    .form-field
-                        label customers' contact
-                        input(type="text" name="customers_contact")
-                    .form-field
-                        label customers' address
-                        input(type="text" name="customers_address")
-                .form-field
-                    button.submit(type='submit') Submit   
-    .form-btn
-        a.btn.btnz(class='button' href='/products') Back
+</style>
+<body>
+    <div class="container form-style">
+        <form id="signup" class="form" action="/produce/order/?id=<%=orderProd._id %>" name="registration" method="POST">
+            <h3>Products booking/ordering</h3>
+            <hr>
+            <div class="row">
+                <div class="col">
+                    <div class="form-field">
+                        <label for="availability">Product booked:</label>
+                        <select name="availability">
+                            <option value="Booked" <% if (orderProd.availability === 'Booked') { %> selected <% } %>>Booked</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label>customers' Email</label>
+                        <input type="email" name="customers_Email">
+                    </div>
+                    <div class="form-field">
+                        <label>customers' contact</label>
+                        <input type="text" name="customers_contact">
+                    </div>
+                    <div class="form-field">
+                        <label>customers' address</label>
+                        <input type="text" name="customers_address">
+                    </div>
+                </div>
+            </div>
+            <div class="form-field">
+                <button class="submit" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="form-btn">
+        <a class="btn btnz button" href="/products">Back</a>
+    </div>
+</body>
+</html>

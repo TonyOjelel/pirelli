@@ -1,78 +1,27 @@
-<!DOCTYPE html>
-
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Login now</title><!-- Required meta tags-->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!-- Bootstrap CSS v5.2.1-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="/public/css/Form.css">
-    <link rel="icon" href="Img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/public/css/index.css">
+    <title>Login-UFarm</title>
 </head>
-<style>
-    body {
-        overflow-y: hidden;
-        background: linear-gradient(90deg, rgba(2, 42, 1, 0.87), rgba(62, 218, 54, 0.37), rgba(2, 42, 1, 0.87));
-    }
-
-    .create {
-        text-decoration: none;
-        color: rgb(0, 0, 0);
-        font-size: 18px;
-        font-weight: 700;
-        margin-left: 25px;
-        margin-top: -45px;
-    }
-
-    .form-group {
-        transform: translateY(55px);
-        margin-left: 12px;
-        padding: 25px;
-        position: absolute;
-        left: 0;
-
-    }
-
-    .btn7 {
-        background: linear-gradient(to bottom, rgb(61, 15, 155, 0.87), rgb(177, 165, 245), rgb(69, 26, 152, 0.86));
-        padding: 15px;
-        border-radius: 25px;
-        font-size: 25px;
-        font-weight: 900;
-        color: rgb(11, 11, 11, 0.87);
-    }
-
-    .form-inputs {
-        height: 5rem;
-        border-radius: 25px;
-        text-align: center;
-    }
-</style>
-<header>
-    <!-- place navbar here-->
-</header>
-<main>
-    <form action="/login" name="registration" method="POST">
-        <div class="container" style="width: 50%; transform:translateY(100px);  background: rgba(35, 55, 84, 0.43);">
-            <h2>Please Login</h2>
-            <hr>
-            <div class="row justify-content-center align-items-center my-5 cage">
-                <div class="col-lg-2 cage">
-                    <div class="row justify-content-center align-items-center g-2 lamar">
-                        <div class="col-lg-8 form-zones"><label>Unique No:</label><input class="form-inputs" name="uniqueNumber" type="text" placeholder="Enter your Unique Number"><small id="uniqueNumbererr"></small></div>
-                        <div class="col-lg-6 form-zones"><label>Password:</label><input class="form-inputs" name="password" type="password" placeholder="Enter your password"><small id="passworderr"></small></div>
-                        <div class="submit">
-                            <div class="btnz" style="transform:translateY(20px);"><button type="submit"><span></span>login</button></div>
-                        </div>
-                    </div>
-                </div>
-            </div><a class="create" href="/adminDash">Create account</a>
-        </div>
-    </form>
-</main>
-<footer>
-    <div class="form-row" style="transform:translateY(-50px);">
-        <div class="col form-group"><a class="btn btn7 button" href="/home">
-                << Back</a>
-        </div>
+<body>  
+    <div class="main-agileinfo">     
+    <div class="agileits-top">
+        <h1>Login</h1>
+        <form action="#" method="post">
+            <input class="text" type="text" name="Username" placeholder="Username" required="">
+            <br>
+            <input class="text" type="password" name="password" placeholder="Password" required="">
+    <div class="wthree-text">
+    <div class="clear"> 
     </div>
-</footer>
+    </div>
+        <input type="submit" value="LOGIN">
+        </form>
+        <p>Don't have an account? <a href="register.html"><span>Sign up now!</span></a></p>
+    </div>
+    </div>
+</body>
+</html>

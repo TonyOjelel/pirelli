@@ -1,14 +1,15 @@
-doctype html
-head
-    meta(charset='UTF-8')
-    meta(http-equiv='X-UA-Compatible' content='IE=edge')
-    meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    link(rel='stylesheet' href='bootstrap-css/css/bootstrap.css')
-    link(rel='stylesheet' href='css/style.css')
-    title Registration
-    style.
-
-        body{
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-css/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Registration</title>
+  </head>
+  <style>
+    body{
             background-color: rgb(12, 85, 12,0.76);
             font-family:Helvetica;  
         }
@@ -90,18 +91,35 @@ head
             padding:12px;
             background: linear-gradient(to bottom,rgba(80, 18, 223, 0.77),rgba(197, 258, 253),rgba(106, 40, 218, 0.76));
         }
-    .container.form-style
-        form#signup.form(action='/produce/stock/?id='+stock._id name='registration' method='POST')
-            h3 Produce availability
-            hr
-            .row
-                .col
-                    .form-field
-                        label(for='availability') Product available:
-                        select(name='availability')
-                            option(value="Available" selected = stock.availability === "Available") Available
-                            option(value="N/A" selected = stock.availability === 'N/A') N/A
-                .form-field
-                    button.submit(type='submit') Submit   
-    .form-btn
-        a.btn.btnz(class='button' href='/foDashboard') Back
+  </style>
+  <body>
+    <!-- Page content goes here -->
+    <div class="container form-style">
+        <form id="signup" class="form" action="/produce/stock/?id=<%= stock._id %>" name="registration" method="POST">
+          <h3>Produce availability</h3>
+          <hr>
+          <div class="row">
+            <div class="col">
+              <div class="form-field">
+                <label for="availability">Product available:</label>
+                <select name="availability">
+                  <option value="Available" <%= stock.availability === "Available" ? "selected" : "" %>>Available</option>
+                  <option value="N/A" <%= stock.availability === "N/A" ? "selected" : "" %>>N/A</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-field">
+              <button class="submit" type="submit">Submit</button>
+            </div>
+          </div>
+        </form>
+        <div class="form-btn">
+          <a class="btn btnz button" href="/foDashboard">Back</a>
+        </div>
+      </div>
+  </body>
+</html>
+
+
+
+

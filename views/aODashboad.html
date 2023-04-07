@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultural Officer dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/css/dashboard.css">
+  </head>
+  <header>
+    <!-- header content here -->
+    <h1>Agricultural Officer</h1>
+    <ul style="list-style:none; float:right;">
+      <li style="transform:translateY(-45px); font-weight:900; color:white;">
+        <span>
+          {{currentUser.userName}} {{currentUser.lastName}}
+        </span>
+      </li>
+    </ul>
+  </header>
+
+  <main>
+    <div class="container" style="transform:translatex(55px);">
+      <div class="row justify-content-center align-items-center g-2">
+        <div class="col-lg-5 cards my-5">
+          <div class="card">
+            <a href="/foReg">
+              <img class="card-img-top" src="/public/Img/images (25).jpeg" alt="Title">
+            </a>
+            <div class="card-body">
+              <h3 class="card-title">Farmer One Registration</h3>
+              <p class="card-text">For the registration of all the Farmer Ones only.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 cards">
+          <div class="card">
+            <a href="/FarmerOneList">
+              <img class="card-img-top" src="Img/Farmer one.jpg" alt="Title">
+            </a>
+            <div class="card-body">
+              <h3 class="card-title">Farmer One List</h3>
+              <p class="card-text">List of farmer ones.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 cards">
+          <div class="card">
+            <a href="/retiredList">
+              <img class="card-img-top" src="Img/retired-rubber-stamp-vector-17236424 (2).jpg" alt="Title">
+            </a>
+            <div class="card-body">
+              <h3 class="card-title">Retired Farmer One List</h3>
+              <p class="card-text">List of retired farmer ones.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 cards my-5">
+          <div class="card">
+            <a href="/aOufList">
+              <img class="card-img-top" src="Img/Ufarm team.jpg" alt="Title">
+            </a>
+            <div class="card-body">
+              <h3 class="card-title">Urban Farmer List</h3>
+              <p class="card-text">The list of Urban farmers on the Ufarm team.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 cards">
+          <div class="card">
+            <a href="/report">
+              <img class="card-img-top" src="Img/morning-farm-report.jpg" alt="Title">
+            </a>
+            <div class="card-body">
+              <h3 class="card-title">Report</h3>
+              <p class="card-text">Report of the Project results.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col form-group">
+        <a class="btn btn7 button" href="/home">&lt;&lt; Back</a>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <h3>Ufarm Project</h3>
+  </footer>  
+</html>

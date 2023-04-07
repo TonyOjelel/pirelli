@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="/path/to/dashlayout.css">
+</head>
+<style>
+        .list{
+        text-align:center;
+        }
+        .card-title{
+        background: linear-gradient(to bottom,rgb(93, 88, 15),rgba(207, 232, 41, 0.58),rgb(74, 77, 26));
+        color:black;
+        border:24px solid rgb(0,0,0,0.67);
+        padding:8px;
+        font-weight:bolder;
+        font-size:28px;
+        border-radius:15px 30px 15px 30px;
+        }
+        nav{
+        font-weight:bolder;
+        text-align:center;
+        }
+        .nev{
+        background: linear-gradient(to bottom,rgb(15, 93, 93),rgb(41, 232, 232),rgb(26, 77, 77));
+        border-radius:15px 30px 15px 30px;
+        width:20%;
+        padding:8px;
+        border:teal;
+        color: rgb(11, 11, 11,0.87);
+        font-weight:700;
+        //-margin:auto;
+        }
+        .table{
+        width:85%; 
+        margin:auto;
+        border:2px ridge grey; 
+        padding:8px;
+        }
+        thead{
+        font-weight:700;
+        font-size:18px;  
+        }
+        tbody{
+            font-weight:500;
+            font-size:15px;
+        }
+        .form-group{
+            transform:translateY(55px);
+            margin-left:12px;
+            padding:25px;
+            position:absolute;
+            left:0;
+
+        }
+        .btnz{
+            background: linear-gradient(to bottom,rgb(61, 15, 155,0.87),rgb(177, 165, 245),rgb(69, 26, 152,0.86));
+            border-radius:25px;
+            padding:16px;
+            font-size:25px;
+            font-weight:900;
+            color: rgb(11, 11, 11,0.87);
+        }
+        .delete{
+            background: linear-gradient(to bottom,rgb(150, 21, 21),rgb(240, 84, 90),rgb(77, 26, 26));
+            font-size:18px;
+            font-weight:700;
+            color: rgb(11, 11, 11,0.87);
+        }
+        .availability{
+            background: linear-gradient(to bottom,rgb(21, 150, 64),rgb(180, 240, 84),rgb(26, 77, 29));	
+            color:rgb(25, 90, 90);
+            font-size:18px;
+            font-weight:700;
+            }
+</style>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>Welcome to my website!</h1>
+          <p>This is the main content area of my website. It's where I'll put all of my interesting content.</p>
+          <p>Here's another paragraph, just to fill out the space.</p>
+        </div>
+        <div class="col-md-6">
+          <img src="/path/to/my/image.jpg" alt="My Image">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Section 1</h2>
+          <p>This is the first section of my website. It's where I'll put my first bit of interesting content.</p>
+        </div>
+        <div class="col-md-4">
+          <h2>Section 2</h2>
+          <p>This is the second section of my website. It's where I'll put my second bit of interesting content.</p>
+        </div>
+        <div class="col-md-4">
+          <h2>Section 3</h2>
+          <p>This is the third section of my website. It's where I'll put my third bit of interesting content.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2023 My Website</p>
+  </footer>
+
+<!--real code-->
+
+
+<!--
+  <header class="card-header list">
+    <h4 class="card-title">Approved Products List</h4>
+    <br>
+    <br>
+  </header>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Produce Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Mode of Delivery</th>
+        <th>Mode of Payment</th>
+        <th>Image</th>
+        <th>Status</th>
+        <th>Availability</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if (approvedGoods.length) { %>
+        <% approvedGoods.forEach(function(approvedGood) { %>
+          <% if (approvedGood.status == 'Approved' && approvedGood.wardName === currentUser.wardName) { %>
+            <tr>
+              <td><%= approvedGood.prodName %></td>
+              <td><%= approvedGood.prodQuantity %></td>
+              <td><%= approvedGood.price %></td>
+              <td><%= approvedGood.deliveryMode %></td>
+              <td><%= approvedGood.paymentMode %></td>
+              <td>
+                <img src="/<%= approvedGood.prodImage %>" alt="Image" width="150px" height="150px">
+              </td>
+              <td><%= approvedGood.status %></td>
+              <td>
+                <a class="btn btn-primary btn-block availability" href="/produce/available/<%= approvedGood._id %>">Availability</a>
+              </td>
+              <td>
+                <form method="post" action="/produce/delete">
+                  <input type="hidden" name="id" value="<%= approvedGood._id %>">
+                  <button class="btn btn-danger btn-block delete" type="submit">Delete</button>
+                </form>
+              </td>
+            </tr>
+          <% } %>
+        <% }) %>
+      <% } %>
+    </tbody>
+  </table>
+  <div class="form-row">
+    <div class="col form-group">
+      <a class="btn btnz button" href="/prodList">&lt;&lt; Back</a>
+    </div>
+  </div>-->
+  
+  
+<!--real code-->  
+
+
+
+</body>
+</html> 
+<!-- Child Page Content -->
+{% extends 'dashlayout' %}
+{% block content %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1>Welcome to my child page!</h1>
+        <p>This is where I'll put all of my interesting content for this page.</p>
+        <p>Here's another paragraph, just to fill out the space.</p>
+      </div>
+      <div class="col-md-6">
+        <img src="/path/to/my/child/image.jpg" alt="My Child Image">
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+
+
+

@@ -1,13 +1,15 @@
-doctype html
-head
-    meta(charset='UTF-8')
-    meta(http-equiv='X-UA-Compatible' content='IE=edge')
-    meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    link(rel='stylesheet' href='bootstrap-css/css/bootstrap.css')
-    title Registration
-    style.
+<!DOCTYPE html>
 
-        body{
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-css/css/bootstrap.css">
+    <title>Registration</title>
+</head>
+<style>
+
+body{
             background-color: rgb(12, 85, 12,0.76);
             font-family:Helvetica;  
         }
@@ -90,18 +92,30 @@ head
             padding:12px;
             background: linear-gradient(to bottom,rgba(80, 18, 223, 0.77),rgba(197, 258, 253),rgba(106, 40, 218, 0.76));
         }
-    .container.form-style
-        form(action='/produce/approve/?id='+products._id name='registration' method='POST')
-            h3 Approve Produce 
-            hr
-            .row
-                .col
-                    .form-field
-                        label(for='status') Product approve:
-                        select(name='status')
-                            option(value="Pending" selected = products.status === "Pending") Pending
-                            option(value="Approved" selected = products.status === 'Approved') Approved
-                    .form-field
-                        button.approve(type='submit') Approve
-    .form-btn
-        a.btn.btnz(class='button' href='/prodList') Back
+</style>
+<div class="container form-style">
+    <form action="/produce/approve/?id={{products._id}}" name="registration" method="POST">
+      <h3>Approve Produce</h3>
+      <hr>
+      <div class="row">
+        <div class="col">
+          <div class="form-field">
+            <label for="status">Product approve:</label>
+            <select name="status">
+              <option value="Pending" {{products.status === "Pending" ? "selected" : ""}}>Pending</option>
+              <option value="Approved" {{products.status === "Approved" ? "selected" : ""}}>Approved</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <button class="approve" type="submit">Approve</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="form-btn">
+      <a class="btn btnz button" href="/prodList">Back</a>
+    </div>
+  </div>
+  
+  
+  
